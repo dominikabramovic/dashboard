@@ -15,8 +15,11 @@ body {
     grid-template-rows: 1fr 4fr;
 }
 
-* {
-    border: solid 1px green;
+.pagetitle {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    place-items: center;
+    margin-left: 50px;
 }
 
 .sidebar {
@@ -31,17 +34,16 @@ body {
 .sidebar-shortcuts {
     display: grid;
     justify-items: start;
-    align-items: start;
-    
+    align-items: start;  
 }
 
 ul{
-    list-style-type: none;
-    display: flex;
     gap:15px;
-    flex-direction: column;
     font-size: x-large;
     font-weight: 700;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30px 1fr;
 }
 
 .content {
@@ -54,19 +56,22 @@ ul{
 
 .projects {
     grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    margin-right: 30px;
 }
 
-.announcement-section-title {
+
+.announcement-section-title,
+.trending-title {
     display: flex;
-    align-self: flex-end;
     margin-bottom: 10px;
     font-size: x-large;
     font-weight: 700;
 }
-.announcements{
 
-}
-.announce-card {
+.announce-card,
+.trending-card{
     display: grid;
     grid-template-columns: minmax(80px, 1fr);
     gap: 20px;
@@ -75,7 +80,11 @@ ul{
     padding: 20px;
 }
 
-.announce-title {
+.announce-title,
+.trending-account-handle,
+.handle-name,
+.hi,
+.project-title {
     font-weight: 600;
 }
 
@@ -83,8 +92,126 @@ ul{
     font-size: 0.85rem;
 }
 
-.announcement {
+.announcement,
+.trending {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.trending-entry {
+    display: flex;
+    gap: 30px;
+}
+
+.trending-account,
+.greet {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending{
+    margin-top: 50px;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-upper,
+.header-lower {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+#search {
+    width: 600px;
+    height: 25px;
+    background-color: var(--background);
+    border-radius: 20px;
+    border: none;
+}
+
+.header-upper-left,
+.header-upper-right,
+.header-lower-left,
+.header-lower-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-upper-right {
+    gap: 25px;
+    font-size: large;
+}
+
+.small-icon {
+    width:25px;
+    height: auto;
+}
+
+.sidebar-icon {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(311deg) brightness(106%) contrast(103%);
+}
+
+.dashboard-icon {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(311deg) brightness(106%) contrast(103%);
+    align-self: ;
+}
+.profile-icon {
+    width: auto;
+    height: 40px;
+    align-self: center;
+}
+
+.profile-pic {
+    height:60px;
+    width: auto;
+    align-self: end;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #6b21a8;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    width: 130px;
+    font-size:medium;
+    font-weight: 600;
+}
+
+.header-lower-right{
+    gap:40px;
+}
+
+.project-card{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    border-left: rgb(240, 172, 25) 10px solid;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.projects-section-title {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
 }
